@@ -41,12 +41,24 @@ var projects = {
   ]
 }
 
+var bio = {
+  "name" = "Ekaterina Aristova",
+  "role" = "Aspiring front end developer with passion for environmental issues",
+  "welcomeMessage" = "You got here after all",
+  "biopic" = [""],
+  "skills" = ["GIS", "writing content", "community management", "css", "html", "js", "photography/illustration"]
+  "contacts" :
+    {
+    "mobile" : "604-000-1111",
+    "email" : "k.aristova@gmail.com",
+    "github" : "katerinkus",
+    "location" : "Vancouver, BC"
+    },
+}
 
 
 
 
-bio
-bio contains name, role, welcomeMessage, and biopic strings, contacts object and skills array of skill strings. The contacts object should contain a mobile number, email address, github username, twitter handle and location. The twitter property is optional.
 
 education
 education contains an array of schools. Each object in the schools array contains name, location, degree dates and url strings, and amajors array of major strings.
