@@ -56,11 +56,30 @@ var bio = {
     },
 }
 
+var education = {
+  "schools": [
+  {
+    "name" : "University of Waterloo",
+    "location" : "Waterloo, ON",
+    "degree dates" : "2011-2013",
+    "url" : "not sure",
+    "majors" : ["Environment and Resource Studies", "Diploma in Ecological Restoration", "Diploma in Environmental Assessment"]
+  },
+  {
+    "name" : "Ryerson University",
+    "location" : "Toronto, ON",
+    "degree dates" : "2009-2010",
+    "url" : "not sure",
+    "majors" : ["Architectural Science"]
+  }
+  ],
 
-
-
-
-education
-education contains an array of schools. Each object in the schools array contains name, location, degree dates and url strings, and amajors array of major strings.
-
-education also contains an onlineCourses array. Each object in the onlineCourses array should contain a title, school, dates and url strings.
+  "onlineCourses": [
+  {
+    "title" : "Front-End Developer NanoDegree",
+    "school" : "Udacity",
+    "dates" : "2016-current",
+    "url" : "link"
+  }
+]
+}
