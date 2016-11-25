@@ -24,12 +24,26 @@ var work = {
   ]
 }
 
+var projects = {
+  "projects" : [
+    {
+      "title" : "West End Community Mapping",
+      "dates" : "Summer 2016",
+      "description" : "Residents were asked to mark or draw their favourite place in the West End on a large printed map.",
+      "images" : ["", ""]
+    },
+    {
+      "title" : "Vancouver Building Age Map",
+      "dates" : "Summer 2014",
+      "description" : "Created a map displaying Vancouver Building ages.",
+      "images" : ["", ""]
+    }
+  ]
+}
 
 
 
 
-projects
-projects contains an array of projects. Each object in the projects array should contain title, dates and description strings, and an images array with URL strings for project images.
 
 bio
 bio contains name, role, welcomeMessage, and biopic strings, contacts object and skills array of skill strings. The contacts object should contain a mobile number, email address, github username, twitter handle and location. The twitter property is optional.
