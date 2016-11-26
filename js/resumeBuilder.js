@@ -42,11 +42,11 @@ var projects = {
 }
 
 var bio = {
-  "name" = "Ekaterina Aristova",
-  "role" = "Aspiring front end developer with passion for environmental issues",
-  "welcomeMessage" = "You got here after all",
-  "biopic" = [""],
-  "skills" = ["GIS", "writing content", "community management", "css", "html", "js", "photography/illustration"]
+  "name" : "Ekaterina Aristova",
+  "role" : "Aspiring front end developer with passion for environmental issues",
+  "welcomeMessage" : "You got here after all",
+  "biopic" : [""],
+  "skills" : ["GIS", "writing content", "community management", "css", "html", "js", "photography/illustration"],
   "contacts" :
     {
     "mobile" : "604-000-1111",
@@ -57,7 +57,7 @@ var bio = {
 }
 
 var education = {
-  "schools": [
+  "schools" : [
   {
     "name" : "University of Waterloo",
     "location" : "Waterloo, ON",
@@ -74,7 +74,7 @@ var education = {
   }
   ],
 
-  "onlineCourses": [
+  "onlineCourses" : [
   {
     "title" : "Front-End Developer NanoDegree",
     "school" : "Udacity",
