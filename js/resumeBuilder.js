@@ -83,3 +83,6 @@ var education = {
   }
 ]
 }
+
+$("#header").append(HTMLheaderName.replace("%data%", bio.name));
+$("#header").append(HTMLheaderRole.replace("%data%", bio.role));
