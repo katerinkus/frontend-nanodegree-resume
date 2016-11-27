@@ -46,7 +46,7 @@ var bio = {
   "role" : "Aspiring front end developer with passion for environmental issues",
   "welcomeMessage" : "You got here after all",
   "biopic" : [""],
-  "skills" : ["GIS", "writing content", "community management", "css", "html", "js", "photography/illustration"],
+  "skills" : ["GIS", "writing content", "community management", "photography/illustration"],
   "contacts" :
     {
     "mobile" : "604-000-1111",
@@ -91,5 +91,9 @@ $("#header").append(HTMLheaderRole.replace("%data%", bio.role));
 //then append html skills and replace data in the bio.skills
 
 if (bio.skills.length>0) {
-  $("#header").append(HTMLskillsstart.replace(%"data"), bio.skills);
+  $("#header").append(HTMLskillsStart);
+  $("#skills").append(HTMLskills.replace("%data%", bio.skills[0]));
+  $("#skills").append(HTMLskills.replace("%data%",bio.skills[1]));
+  $("#skills").append(HTMLskills.replace("%data%",bio.skills[2]));
+  $("#skills").append(HTMLskills.replace("%data%",bio.skills[3]));
 }
