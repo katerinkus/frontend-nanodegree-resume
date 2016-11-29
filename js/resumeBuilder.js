@@ -1,4 +1,4 @@
-var work = {
+udvar work = {
   "jobs" : [
     {
       "employer" : "HiVE",
@@ -89,8 +89,12 @@ $("#header").append(HTMLheaderRole.replace("%data%", bio.role));
 
 if (bio.skills.length>0) {
   $("#header").append(HTMLskillsStart);
-  $("#skills").append(HTMLskills.replace("%data%", bio.skills[0]));
-  $("#skills").append(HTMLskills.replace("%data%",bio.skills[1]));
-  $("#skills").append(HTMLskills.replace("%data%",bio.skills[2]));
-  $("#skills").append(HTMLskills.replace("%data%",bio.skills[3]));
+  //$("#skills").append(HTMLskills.replace("%data%", bio.skills[0]));
+  //$("#skills").append(HTMLskills.replace("%data%",bio.skills[1]));
+  //$("#skills").append(HTMLskills.replace("%data%",bio.skills[2]));
+  //$("#skills").append(HTMLskills.replace("%data%",bio.skills[3]));
+
+  for (skill in bio.skills) {
+    $("#skills"). append(HTMLskills.replace("%data%", bio.skills[skill]))
+  };
 }
