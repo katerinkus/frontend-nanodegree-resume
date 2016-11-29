@@ -96,7 +96,7 @@ if (bio.skills.length>0) {
 
 var displayWork = function () {
   $("#workExperience").append(HTMLworkStart);
-  for (job in work.jobs) {
+  for (job = 0; job < work.jobs.length; job++) {
     var formatted_employer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
     var formatted_title = HTMLworkTitle.replace("%data%", work.jobs[job].title);
     $(".work-entry").append(formatted_employer + formatted_title);
