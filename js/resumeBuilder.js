@@ -94,13 +94,29 @@ if (bio.skills.length>0) {
   };
 }
 
-var displayWork = function () {
-  for (job = 0; job < work.jobs.length; job++) {
-    $("#workExperience").append(HTMLworkStart);
-    var formatted_employer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-    var formatted_title = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-    $(".work-entry:last").append(formatted_employer + formatted_title);
-  }
-};
+// F U N C T I O N S //
 
-displayWork();
+work.display = function (w) {
+  for (job = 0; job < w.jobs.length; job++) {
+    $("#workExperience").append(HTMLworkStart);
+    var formatted_employer = HTMLworkEmployer.replace("%data%", w.jobs[job].employer);
+    var formatted_title = HTMLworkTitle.replace("%data%", w.jobs[job].title);
+    var formatted_location = HTMLworkLocation.replace("%data%", w.jobs[job].location);
+    var formatted_dates = HTMLworkDates.replace("%data%", w.jobs[job].dates);
+    var formatted_description = HTMLworkDescription.replace("%data%", w.jobs[job].description);
+    var formatted_work =formatted_employer + formatted_title + formatted_location + formatted_dates + formatted_description;
+    $(".work-entry:last").append(formatted_work);
+  }
+}
+
+projects.display = function(){};
+bio.display = function(){};
+
+
+//var sections = [work, projects, bio];
+//var displays = function (sections) {
+//  for (s = 0; s < sections.length; s++ ) {
+//    sections[s].display();
+//  }
+//}
+//displays(sections);
