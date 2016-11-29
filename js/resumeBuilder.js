@@ -1,4 +1,4 @@
-udvar work = {
+var work = {
   "jobs" : [
     {
       "employer" : "HiVE",
