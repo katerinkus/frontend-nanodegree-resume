@@ -102,36 +102,46 @@ bio.display(bio);
 
 var education = {
   "schools" : [
-  {
-    "name" : "University of Waterloo",
-    "location" : "Waterloo, ON",
-    "degree dates" : "2011-2013",
-    "url" : "not sure",
-    "majors" : ["Environment and Resource Studies", "Diploma in Ecological Restoration", "Diploma in Environmental Assessment"]
-  },
-  {
-    "name" : "Ryerson University",
-    "location" : "Toronto, ON",
-    "degree dates" : "2009-2010",
-    "url" : "not sure",
-    "majors" : ["Architectural Science"]
-  }
+    {
+      "name" : "University of Waterloo",
+      "degree" : "Environmental Studies (BA)",
+      "location" : "Waterloo, ON",
+      "degree dates" : "2011-2013",
+      "majors" : ["Environment and Resource Studies", "Diploma in Ecological Restoration", "Diploma in Environmental Assessment"]
+    },
+    {
+      "name" : "Ryerson University",
+      "degree" : "Architecture (first year)",
+      "location" : "Toronto, ON",
+      "degree dates" : "2009-2010",
+      "majors" : ["Architectural Science"]
+    }
   ],
 
   "onlineCourses" : [
-  {
-    "title" : "Front-End Developer NanoDegree",
-    "school" : "Udacity",
-    "dates" : "2016-current",
-    "url" : "link"
+    {
+      "title" : "Front-End Developer NanoDegree",
+      "school" : "Udacity",
+      "dates" : "2016-current",
+      "url" : "link"
+    }
+  ],
+
+  "display" : function(edu) {
+    for (school = 0; school < edu.schools.length; school++) {
+      $("#education").append(HTMLschoolStart);
+      var formatted_name = HTMLschoolName.replace("%data%", edu.schools[school].name);
+      var formatted_degree = HTMLschoolDegree.replace("%data%", edu.schools[school].degree);
+      var formatted_location = HTMLschoolLocation.replace("%data%", edu.schools[school].location);
+      var formatted_dates = HTMLschoolDates.replace("%data%", edu.schools[school]["degree dates"]);
+      var formatted_schools = formatted_name + formatted_degree + formatted_location + formatted_dates;
+      $(".education-entry:last").append(formatted_schools);
+      var formatted_majors = HTMLschoolMajor.replace("%data%", edu.schools[school].majors.join(", "));
+      $(".education-entry:last").append(formatted_majors);
+    }
   }
-],
-
 }
-
-//$("#header").append(HTMLheaderName.replace("%data%", bio.name));
-//$("#header").append(HTMLheaderRole.replace("%data%", bio.role));
-
+education.display(education);
 //if (bio.skills.length>0) {
   //$("#header").append(HTMLskillsStart);
   //for (skill in bio.skills) {
