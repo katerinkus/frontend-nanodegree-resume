@@ -30,7 +30,7 @@
       var formatted_location = HTMLworkLocation.replace("%data%", w.jobs[job].location);
       var formatted_dates = HTMLworkDates.replace("%data%", w.jobs[job].dates);
       var formatted_description = HTMLworkDescription.replace("%data%", w.jobs[job].description);
-      var formatted_work =formatted_employer + formatted_title + formatted_location + formatted_dates + formatted_description;
+      var formatted_work = formatted_employer + formatted_title + formatted_location + formatted_dates + formatted_description;
       $(".work-entry:last").append(formatted_work);
     }
   }
@@ -52,8 +52,21 @@ var projects = {
       "description" : "Created a map displaying Vancouver Building ages.",
       "images" : ["", ""]
     }
-  ]
+  ],
+  "display" : function (i) {
+    for (proj=0; proj < i.projects.length; proj++) {
+      $("#projects").append(HTMLprojectStart);
+      var formatted_title = HTMLprojectTitle.replace("%data%", i.projects[proj].title);
+      var formatted_dates = HTMLprojectDates.replace("%data%", i.projects[proj].dates);
+      var formatted_description = HTMLprojectDescription.replace("%data%", i.projects[proj].description);
+      var formatted_images = HTMLprojectImage.replace("%data%", i.projects[proj].images);
+      var formatted_projects = formatted_title + formatted_dates + formatted_description+formatted_images;
+      $(".project-entry:last").append(formatted_projects);
+    }
+  }
 }
+
+projects.display(projects);
 
 var bio = {
   "name" : "Ekaterina Aristova",
@@ -107,18 +120,3 @@ if (bio.skills.length>0) {
     $("#skills").append(HTMLskills.replace("%data%", bio.skills[skill]))
   };
 }
-
-// F U N C T I O N S //
-
-
-projects.display = function(){};
-bio.display = function(){};
-
-
-//var sections = [work, projects, bio];
-//var displays = function (sections) {
-//  for (s = 0; s < sections.length; s++ ) {
-//    sections[s].display();
-//  }
-//}
-//displays(sections);
