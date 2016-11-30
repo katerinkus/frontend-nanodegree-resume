@@ -1,4 +1,4 @@
-var work = {
+ var work = {
   "jobs" : [
     {
       "employer" : "HiVE",
@@ -21,8 +21,22 @@ var work = {
       "dates" : "December 2013-May 2016",
       "description" : "Taught people photography while also guiding them through Vancouver. In the last year, I have also managed social media. Website visits from Facebook went up by 500%. Instagram following grew from 3 hundred to 11 hundred."
     }
-  ]
+  ],
+  "display" : function (w) {
+    for (job = 0; job < w.jobs.length; job++) {
+      $("#workExperience").append(HTMLworkStart);
+      var formatted_employer = HTMLworkEmployer.replace("%data%", w.jobs[job].employer);
+      var formatted_title = HTMLworkTitle.replace("%data%", w.jobs[job].title);
+      var formatted_location = HTMLworkLocation.replace("%data%", w.jobs[job].location);
+      var formatted_dates = HTMLworkDates.replace("%data%", w.jobs[job].dates);
+      var formatted_description = HTMLworkDescription.replace("%data%", w.jobs[job].description);
+      var formatted_work =formatted_employer + formatted_title + formatted_location + formatted_dates + formatted_description;
+      $(".work-entry:last").append(formatted_work);
+    }
+  }
 }
+
+work.display(work);
 
 var projects = {
   "projects" : [
@@ -96,18 +110,6 @@ if (bio.skills.length>0) {
 
 // F U N C T I O N S //
 
-work.display = function (w) {
-  for (job = 0; job < w.jobs.length; job++) {
-    $("#workExperience").append(HTMLworkStart);
-    var formatted_employer = HTMLworkEmployer.replace("%data%", w.jobs[job].employer);
-    var formatted_title = HTMLworkTitle.replace("%data%", w.jobs[job].title);
-    var formatted_location = HTMLworkLocation.replace("%data%", w.jobs[job].location);
-    var formatted_dates = HTMLworkDates.replace("%data%", w.jobs[job].dates);
-    var formatted_description = HTMLworkDescription.replace("%data%", w.jobs[job].description);
-    var formatted_work =formatted_employer + formatted_title + formatted_location + formatted_dates + formatted_description;
-    $(".work-entry:last").append(formatted_work);
-  }
-}
 
 projects.display = function(){};
 bio.display = function(){};
