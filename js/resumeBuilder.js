@@ -86,6 +86,11 @@ var bio = {
     $("#header").append(HTMLheaderRole.replace("%data%", bio.role));
     $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
     $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
+    $("#header").append(HTMLskillsStart);
+    for (skill=0; skill < bio.skills.length; skill++) {
+      var formatted_skill = HTMLskills.replace("%data%", bio.skills[skill]);
+      $("#skills").append(formatted_skill);
+    }
   }
 }
 
