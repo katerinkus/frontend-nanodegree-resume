@@ -81,7 +81,7 @@ var bio = {
     "github" : "katerinkus",
     "location" : "Vancouver, BC"
     },
-  "display" : function () {
+  "display" : function (bio) {
     $("#header").append(HTMLheaderName.replace("%data%", bio.name));
     $("#header").append(HTMLheaderRole.replace("%data%", bio.role));
     $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
@@ -91,10 +91,14 @@ var bio = {
       var formatted_skill = HTMLskills.replace("%data%", bio.skills[skill]);
       $("#skills").append(formatted_skill);
     }
+    $("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+    $("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+    $("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+    $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
   }
 }
 
-bio.display();
+bio.display(bio);
 
 var education = {
   "schools" : [
