@@ -44,13 +44,13 @@ var projects = {
       "title" : "West End Community Mapping",
       "dates" : "Summer 2016",
       "description" : "Residents were asked to mark or draw their favourite place in the West End on a large printed map.",
-      "images" : ["", ""]
+      "images" : ["https://unsplash.it/400/100?image=56"]
     },
     {
       "title" : "Vancouver Building Age Map",
       "dates" : "Summer 2014",
       "description" : "Created a map displaying Vancouver Building ages.",
-      "images" : ["", ""]
+      "images" : ["images/map.png"]
     }
   ],
   "display" : function (i) {
@@ -72,7 +72,7 @@ var bio = {
   "name" : "Ekaterina Aristova",
   "role" : "Aspiring front end developer with passion for environmental issues",
   "welcomeMessage" : "You got here after all",
-  "biopic" : [""],
+  "biopic" : ["images/bio.jpg"],
   "skills" : ["GIS", "writing content", "community management", "photography/illustration"],
   "contacts" :
     {
@@ -81,7 +81,15 @@ var bio = {
     "github" : "katerinkus",
     "location" : "Vancouver, BC"
     },
+  "display" : function () {
+    $("#header").append(HTMLheaderName.replace("%data%", bio.name));
+    $("#header").append(HTMLheaderRole.replace("%data%", bio.role));
+    $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
+    $("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
+  }
 }
+
+bio.display();
 
 var education = {
   "schools" : [
@@ -108,15 +116,16 @@ var education = {
     "dates" : "2016-current",
     "url" : "link"
   }
-]
+],
+
 }
 
-$("#header").append(HTMLheaderName.replace("%data%", bio.name));
-$("#header").append(HTMLheaderRole.replace("%data%", bio.role));
+//$("#header").append(HTMLheaderName.replace("%data%", bio.name));
+//$("#header").append(HTMLheaderRole.replace("%data%", bio.role));
 
-if (bio.skills.length>0) {
-  $("#header").append(HTMLskillsStart);
-  for (skill in bio.skills) {
-    $("#skills").append(HTMLskills.replace("%data%", bio.skills[skill]))
-  };
-}
+//if (bio.skills.length>0) {
+  //$("#header").append(HTMLskillsStart);
+  //for (skill in bio.skills) {
+    //$("#skills").append(HTMLskills.replace("%data%", bio.skills[skill]))
+  //};
+//}
