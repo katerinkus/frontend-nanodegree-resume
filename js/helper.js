@@ -37,6 +37,7 @@ var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
+//Comment by Ekaterina: if I was making the template, then I would add a URL attribute for the projects. Then I would replace # with the projects url, instead of adding it manually here. 
 var HTMLprojectTitle = '<a href="http://www.aristova.me/projects/vancouver-building-age-map/">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
