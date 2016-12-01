@@ -22,14 +22,14 @@
       "description" : "Taught people photography while also guiding them through Vancouver. In the last year, I have also managed social media. Website visits from Facebook went up by 500%. Instagram following grew from 3 hundred to 11 hundred."
     }
   ],
-  "display" : function (w) {
-    for (job = 0; job < w.jobs.length; job++) {
+  "display" : function (exp) {
+    for (job = 0; job < exp.jobs.length; job++) {
       $("#workExperience").append(HTMLworkStart);
-      var formatted_employer = HTMLworkEmployer.replace("%data%", w.jobs[job].employer);
-      var formatted_title = HTMLworkTitle.replace("%data%", w.jobs[job].title);
-      var formatted_location = HTMLworkLocation.replace("%data%", w.jobs[job].location);
-      var formatted_dates = HTMLworkDates.replace("%data%", w.jobs[job].dates);
-      var formatted_description = HTMLworkDescription.replace("%data%", w.jobs[job].description);
+      var formatted_employer = HTMLworkEmployer.replace("%data%", exp.jobs[job].employer);
+      var formatted_title = HTMLworkTitle.replace("%data%", exp.jobs[job].title);
+      var formatted_location = HTMLworkLocation.replace("%data%", exp.jobs[job].location);
+      var formatted_dates = HTMLworkDates.replace("%data%", exp.jobs[job].dates);
+      var formatted_description = HTMLworkDescription.replace("%data%", exp.jobs[job].description);
       var formatted_work = formatted_employer + formatted_title + formatted_location + formatted_dates + formatted_description;
       $(".work-entry:last").append(formatted_work);
     }
@@ -44,7 +44,7 @@ var projects = {
       "title" : "West End Community Mapping",
       "dates" : "Summer 2016",
       "description" : "Residents were asked to mark or draw their favourite place in the West End on a large printed map.",
-      "images" : ["https://unsplash.it/400/100?image=56"]
+      "images" : ["https://unsplash.it/630/200?image=816"]
     },
     {
       "title" : "Vancouver Building Age Map",
@@ -53,13 +53,13 @@ var projects = {
       "images" : ["images/map.png"]
     }
   ],
-  "display" : function (i) {
-    for (proj=0; proj < i.projects.length; proj++) {
+  "display" : function (projectList) {
+    for (proj=0; proj < projectList.projects.length; proj++) {
       $("#projects").append(HTMLprojectStart);
-      var formatted_title = HTMLprojectTitle.replace("%data%", i.projects[proj].title);
-      var formatted_dates = HTMLprojectDates.replace("%data%", i.projects[proj].dates);
-      var formatted_description = HTMLprojectDescription.replace("%data%", i.projects[proj].description);
-      var formatted_images = HTMLprojectImage.replace("%data%", i.projects[proj].images);
+      var formatted_title = HTMLprojectTitle.replace("%data%", projectList.projects[proj].title);
+      var formatted_dates = HTMLprojectDates.replace("%data%", projectList.projects[proj].dates);
+      var formatted_description = HTMLprojectDescription.replace("%data%", projectList.projects[proj].description);
+      var formatted_images = HTMLprojectImage.replace("%data%", projectList.projects[proj].images);
       var formatted_projects = formatted_title + formatted_dates + formatted_description+formatted_images;
       $(".project-entry:last").append(formatted_projects);
     }
@@ -123,7 +123,7 @@ var education = {
       "title" : "Front-End Developer NanoDegree",
       "school" : "Udacity",
       "dates" : "2016-current",
-      "url" : "link"
+      "url" : "https://udacity.com"
     }
   ],
 
