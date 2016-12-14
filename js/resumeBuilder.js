@@ -39,12 +39,12 @@ var projects = {
         "title": "West End Community Mapping",
         "dates": "Summer 2016",
         "description": "Residents were asked to mark or draw their favourite place in the West End on a large printed map.",
-        "images": ["https://unsplash.it/630/200?image=816"]
+        "images": ["https://unsplash.it/620/200?image=816"]
     }, {
         "title": "Vancouver Building Age Map",
         "dates": "Summer 2014",
         "description": "Created a map displaying Vancouver Building ages.",
-        "images": ["images/map.png"]
+        "images": ["https://unsplash.it/300/200?image=952", "https://unsplash.it/300/200?image=1005"]
     }],
     "display": function(projectList) {
         for (proj = 0; proj < projectList.projects.length; proj++) {
@@ -52,9 +52,12 @@ var projects = {
             var formatted_title = HTMLprojectTitle.replace("%data%", projectList.projects[proj].title);
             var formatted_dates = HTMLprojectDates.replace("%data%", projectList.projects[proj].dates);
             var formatted_description = HTMLprojectDescription.replace("%data%", projectList.projects[proj].description);
-            var formatted_images = HTMLprojectImage.replace("%data%", projectList.projects[proj].images);
-            var formatted_projects = formatted_title + formatted_dates + formatted_description + formatted_images;
+            var formatted_projects = formatted_title + formatted_dates + formatted_description;
             $(".project-entry:last").append(formatted_projects);
+            for (img = 0; img < projectList.projects[proj].images.length; img++) {
+              var formatted_images = HTMLprojectImage.replace("%data%", projectList.projects[proj].images[img]);
+              $(".project-entry:last").append(formatted_images);
+            };
         }
     }
 };
