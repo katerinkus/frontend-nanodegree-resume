@@ -68,7 +68,7 @@ var bio = {
     "name": "Ekaterina Aristova",
     "role": "Aspiring front end developer with passion for environmental issues",
     "welcomeMessage": "You got here after all",
-    "biopic": ["images/bio.jpg"],
+    "biopic": "images/bio.jpg",
     "skills": ["GIS", "writing content", "community management", "photography/illustration"],
     "contacts": {
         "mobile": "604-000-1111",
@@ -86,10 +86,10 @@ var bio = {
             var formatted_skill = HTMLskills.replace("%data%", bio.skills[skill]);
             $("#skills").append(formatted_skill);
         }
-        $("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
-        $("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
-        $("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
-        $("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
+        $("#topContacts, #footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+        $("#topContacts, #footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+        $("#topContacts, #footerContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+        $("#topContacts, #footerContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
     }
 };
 
