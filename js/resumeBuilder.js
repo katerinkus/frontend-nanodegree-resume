@@ -39,12 +39,12 @@ var projects = {
         "title": "West End Community Mapping",
         "dates": "Summer 2016",
         "description": "Residents were asked to mark or draw their favourite place in the West End on a large printed map.",
-        "images": ["https://unsplash.it/620/200?image=816"]
+        "images": ["https://unsplash.it/300/200?image=816", "https://unsplash.it/300/200?image=1005"]
     }, {
         "title": "Vancouver Building Age Map",
         "dates": "Summer 2014",
         "description": "Created a map displaying Vancouver Building ages.",
-        "images": ["https://unsplash.it/300/200?image=952", "https://unsplash.it/300/200?image=1005"]
+        "images": ["images/map.png"]
     }],
     "display": function(projectList) {
         for (proj = 0; proj < projectList.projects.length; proj++) {
