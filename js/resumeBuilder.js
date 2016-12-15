@@ -100,14 +100,16 @@ var education = {
         "name": "University of Waterloo",
         "degree": "Environmental Studies (BA)",
         "location": "Waterloo, ON",
-        "degree dates": "2011-2013",
-        "majors": ["Environment and Resource Studies", "Diploma in Ecological Restoration", "Diploma in Environmental Assessment"]
+        "dates": "2011-2013",
+        "majors": ["Environment and Resource Studies", "Diploma in Ecological Restoration", "Diploma in Environmental Assessment"],
+        "url": "https://uwaterloo.ca/"
     }, {
         "name": "Ryerson University",
         "degree": "Architecture (first year)",
         "location": "Toronto, ON",
-        "degree dates": "2009-2010",
-        "majors": ["Architectural Science"]
+        "dates": "2009-2010",
+        "majors": ["Architectural Science"],
+        "url": "http://www.ryerson.ca/"
     }],
 
     "onlineCourses": [{
@@ -123,9 +125,10 @@ var education = {
             var formatted_name = HTMLschoolName.replace("%data%", edu.schools[school].name);
             var formatted_degree = HTMLschoolDegree.replace("%data%", edu.schools[school].degree);
             var formatted_location = HTMLschoolLocation.replace("%data%", edu.schools[school].location);
-            var formatted_dates = HTMLschoolDates.replace("%data%", edu.schools[school]["degree dates"]);
+            var formatted_dates = HTMLschoolDates.replace("%data%", edu.schools[school]["dates"]);
             var formatted_majors = HTMLschoolMajor.replace("%data%", edu.schools[school].majors.join(", "));
-            var formatted_schools = formatted_name + formatted_degree + formatted_location + formatted_dates + formatted_majors;
+            var formatted_url = HTMLonlineURL.replace("%data%", edu.schools[school].url);
+            var formatted_schools = formatted_name + formatted_degree + formatted_location + formatted_dates + formatted_majors + formatted_url;
             $(".education-entry:last").append(formatted_schools);
         }
         for (course = 0; course < edu.onlineCourses.length; course++) {
