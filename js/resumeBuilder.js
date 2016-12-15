@@ -55,8 +55,8 @@ var projects = {
             var formatted_projects = formatted_title + formatted_dates + formatted_description;
             $(".project-entry:last").append(formatted_projects);
             for (img = 0; img < projectList.projects[proj].images.length; img++) {
-              var formatted_images = HTMLprojectImage.replace("%data%", projectList.projects[proj].images[img]);
-              $(".project-entry:last").append(formatted_images);
+                var formatted_images = HTMLprojectImage.replace("%data%", projectList.projects[proj].images[img]);
+                $(".project-entry:last").append(formatted_images);
             };
         }
     }
