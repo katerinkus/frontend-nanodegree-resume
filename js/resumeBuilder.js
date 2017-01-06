@@ -143,3 +143,5 @@ var education = {
     }
 };
 education.display(education);
+
+$('#mapDiv').append(googleMap);

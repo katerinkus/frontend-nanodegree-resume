@@ -37,7 +37,7 @@ var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-//Comment by Ekaterina: if I was making the template, then I would add a URL attribute for the projects. Then I would replace # with the projects url, instead of adding it manually here. 
+//Comment by Ekaterina: if I was making the template, then I would add a URL attribute for the projects. Then I would replace # with the projects url, instead of adding it manually here.
 var HTMLprojectTitle = '<a href="http://www.aristova.me/projects/vancouver-building-age-map/">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
@@ -235,16 +235,12 @@ function initializeMap() {
 
 }
 
-/*
-Uncomment the code below when you're ready to implement a Google Map!
-*/
+//Calls the initializeMap() function when the page loads
+window.addEventListener('load', initializeMap);
 
-// Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
-
-// Vanilla JS way to listen for resizing of the window
-// and adjust map bounds
-//window.addEventListener('resize', function(e) {
+//Vanilla JS way to listen for resizing of the window
+//and adjust map bounds
+window.addEventListener('resize', function(e) {
   //Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+ map.fitBounds(mapBounds);
+});
