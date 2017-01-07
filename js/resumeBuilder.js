@@ -57,7 +57,7 @@ var projects = {
             for (img = 0; img < projectList.projects[proj].images.length; img++) {
                 var formatted_images = HTMLprojectImage.replace("%data%", projectList.projects[proj].images[img]);
                 $(".project-entry:last").append(formatted_images);
-            };
+            }
         }
     }
 };
@@ -125,7 +125,7 @@ var education = {
             var formatted_name = HTMLschoolName.replace("%data%", edu.schools[school].name);
             var formatted_degree = HTMLschoolDegree.replace("%data%", edu.schools[school].degree);
             var formatted_location = HTMLschoolLocation.replace("%data%", edu.schools[school].location);
-            var formatted_dates = HTMLschoolDates.replace("%data%", edu.schools[school]["dates"]);
+            var formatted_dates = HTMLschoolDates.replace("%data%", edu.schools[school].dates);
             var formatted_majors = HTMLschoolMajor.replace("%data%", edu.schools[school].majors.join(", "));
             var formatted_url = HTMLonlineURL.replace("%data%", edu.schools[school].url);
             var formatted_schools = formatted_name + formatted_degree + formatted_location + formatted_dates + formatted_majors + formatted_url;
@@ -136,8 +136,8 @@ var education = {
             var formatted_title = HTMLonlineTitle.replace("%data%", edu.onlineCourses[course].title);
             var formatted_onlineschool = HTMLonlineSchool.replace("%data%", edu.onlineCourses[course].school);
             var formatted_onlinedates = HTMLonlineDates.replace("%data%", edu.onlineCourses[course].dates);
-            var formatted_url = HTMLonlineURL.replace("%data%", edu.onlineCourses[course].url);
-            var formatted_courses = HTMLonlineClasses + formatted_title + formatted_onlineschool + formatted_onlinedates + formatted_url;
+            var formatted_course_url = HTMLonlineURL.replace("%data%", edu.onlineCourses[course].url);
+            var formatted_courses = HTMLonlineClasses + formatted_title + formatted_onlineschool + formatted_onlinedates + formatted_course_url;
             $(".education-entry:last").append(formatted_courses);
         }
     }
